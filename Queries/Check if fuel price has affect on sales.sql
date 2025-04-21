@@ -1,6 +1,4 @@
 -- Check if fuel price has affect on sales --
--- Min fuel price is 2.47, max fuel price is 4.47, average fuel price is 3.52 --
--- Fuel price range is divided into 4 categories: Very Low, Low, Medium, High --
 SELECT
     CASE
         WHEN Fuel_Price < 3 THEN 'Very Low'
@@ -16,11 +14,7 @@ ORDER BY Avg_Weekly_Sales DESC;
 
 
 
--- Calculate the median of fuel price --
--- Only use function found in MySQL 8.0+ --
--- Percentile function is not available in MySQL 5.7 --
--- So do not use it in the query --
--- Function median does not exist in MySQL 5.7, so don't use that too --
+-- Calculate the mean, min, and max of fuel price --
 SELECT
     ROUND(MIN(Fuel_Price), 2) AS Min_Fuel_Price,
     ROUND(MAX(Fuel_Price), 2) AS Max_Fuel_Price,
