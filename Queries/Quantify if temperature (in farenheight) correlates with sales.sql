@@ -1,4 +1,4 @@
--- Quantify if temperature (it's in farenheight) correlates with sales
+-- Quantify if temperature (In farenheight) correlates with sales
 SELECT
     CASE
         WHEN temperature < 50 THEN 'Cool'
